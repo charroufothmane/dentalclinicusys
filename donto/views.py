@@ -1,6 +1,4 @@
 from django.shortcuts import render
-import django
-from django.conf import settings
 from django.core.mail import send_mail
 
 # Create your views here.
@@ -23,17 +21,21 @@ def contact(request):
         message_email=request.POST["message-email"]
         message =request.POST["message"]
         return  render(request,'contact.html',{"message_name":message_name})
+
+        
         # send_mail('Subject here', 'Here is the message.', settings.EMAIL_HOST_USER,
         #  ['elfarah61@gmail.com'], fail_silently=False)
 
         # #send email
         send_mail(
-           message_name , #subject
-           message ,#message
-           message_email ,#from email
-            ['osmanout96@gmail.com'],
-             fail_silently=False)
-    # #to email
+           message_name, #subject
+           message,#message
+           message_email,
+           ['elfarah61@gmail.com'],
+           )#from email
+            
+             # fail_silently=False)
+        
 
         
     else:

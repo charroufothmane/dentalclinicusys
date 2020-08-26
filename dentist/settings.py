@@ -24,7 +24,7 @@ SECRET_KEY = '5_khk&jcb^b4l%%!3rca=5j!4(=9f8saqtid9vv%$3ya&!jw-0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dentalclinicus.herokuapp.com']
 
 
 # Application definition

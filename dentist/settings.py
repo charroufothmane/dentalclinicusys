@@ -37,9 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'donto',
-    'accounts.apps.Accountsconfig',
-    'storages',
-    'django_filters'
+    
 
 ]
 
@@ -127,7 +125,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+staticfiles_storage = 'whitenoise.storage.compressedmanifeststaticfilesstorage'
 # EMAIL_USE_TLS = True
 # EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
 # EMAIL_HOST = 'smtp.gmail.com'
